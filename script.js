@@ -3,11 +3,14 @@ let secondsRadius;
 let minutesRadius;
 let hoursRadius;
 let clockDiameter;
-  
+let snowflakes = []; // array to hold snowflake objects
+
 function setup() {
   createCanvas(720, 400);
   stroke(255);
-
+noStroke(); 
+ text("tyty and eonzhe")
+ 
   let radius = min(width, height) / 2;
   secondsRadius = radius * 0.71;
   minutesRadius = radius * 0.6;
@@ -19,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(230);
+  background("brown");
 
   // Draw the clock background
   noStroke();
