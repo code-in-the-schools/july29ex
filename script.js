@@ -56,20 +56,21 @@ function draw() {
     vertex(x, y);
   }
   endShape();
-}
+  //snowflake
+   let t = frameCount / 60; // update time
 
-function drawNewScene() {
-  let t = frameCount / 60; // update time
   // create a random number of snowflakes each frame
   for (let i = 0; i < random(5); i++) {
     snowflakes.push(new snowflake()); // append snowflake object
   }
+
   // loop through snowflakes with a for..of loop
   for (let flake of snowflakes) {
     flake.update(t); // update snowflake position
     flake.display(); // draw snowflake
   }
 }
+
 // snowflake class
 function snowflake() {
   // initialize coordinates
